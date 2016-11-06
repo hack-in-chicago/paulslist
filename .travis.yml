@@ -9,4 +9,4 @@ install: "pip install -r requirements.txt"
 # before running tests
 before_script: cd paulslist
 # command to run tests
-script: python ./paulslist/manage.py test
+script: python manage.py test
