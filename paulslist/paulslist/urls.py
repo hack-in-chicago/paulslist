@@ -20,4 +20,6 @@ from classifieds import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', views.home),
+    url(r'^post/[0-9]*', views.post_detail),
+    url(r'^country/[a-zA-Z\-]*', views.post_list)
 ]

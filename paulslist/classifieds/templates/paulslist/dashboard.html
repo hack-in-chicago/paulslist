@@ -4,13 +4,20 @@
 <div class="row">
   <div class="col-sm-4">
     <div class="well">
-      <a class="btn btn-primary btn-block" href=""><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;New Post</a>
-      [latest posts go here]
+      <ul>
+      {% for item in latest %}
+        <li><a href="{% url 'detail' latest.id %}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
   </div>
   <div class="col-sm-8">
     <div class="well">
-      [map widget goes here]
+      <ul>
+      {% for country in countries %}
+        <li><a href="{% url 'list' country %}">{{ country }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
