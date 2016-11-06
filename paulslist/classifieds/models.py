@@ -8,7 +8,7 @@ class Category(models.Model):
 class Post(models.Model):
     title        = models.TextField()
     description  = models.TextField()
-    user         = models.ForeignKey(User)
+    user         = models.ForeignKey(User, blank=True, null=True) #temporary
     category     = models.ForeignKey(Category)
     is_completed = models.BooleanField()
     is_insider   = models.BooleanField()

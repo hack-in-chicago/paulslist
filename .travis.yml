@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.5"
+# slack notifications
+notifications:
+  slack: kbmm:05WqKjWExXjf9YsuXoNY1NLY
+# command to install dependencies
+install: "pip install -r requirements.txt"
+# before running tests
+before_script: cd paulslist
+# command to run tests
+script: python ./paulslist/manage.py test
